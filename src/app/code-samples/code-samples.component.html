@@ -1,0 +1,48 @@
+<section id="codeSamples" itemscope itemtype="https://schema.org/ContactPage">
+    <div class="container" [ngClass]="{'fade': hasBeenSubmited}">
+        
+        <div class="text-center">
+            <div class="text-left">
+                <!-- <a routerLink='/codeSamples' itemprop="url" ><span itemprop="name">Back to resume</span></a> -->
+
+                <!-- <fa-icon [icon]="['fas', 'music']" class="icon" title="Back to" itemprop="hobby"></fa-icon> -->
+                <!-- <fa-icon [icon]="['fas', 'music']"></fa-icon> -->
+            </div>
+            <div class="title">
+                <h1>Code Samples</h1>
+            </div>
+            <div class="top-container">
+                <div class="picture"></div>
+                <div class="info">
+                    
+                </div>
+            </div>
+            <div class="content-container">
+              
+                <ngb-accordion activeIds="map">
+                    <ngb-panel id="map" title="Map">
+                        <ng-template show ngbPanelContent>
+                            
+                        <cs-map></cs-map>
+                        
+                        </ng-template>
+                    </ngb-panel>
+                    <ngb-panel title="Panel Two">
+                        <ng-template ngbPanelContent>
+                            2
+                        </ng-template>
+                    </ngb-panel>
+                    <ngb-panel title="Panel Three">
+                        <ng-template ngbPanelContent>
+                            3
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion>
+            </div>
+            <div class="bottom-container">
+                
+            </div>
+        </div>
+        <div class="right-side"></div>
+    </div>
+</section>

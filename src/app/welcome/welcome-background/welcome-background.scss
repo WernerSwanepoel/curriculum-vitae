@@ -1,0 +1,88 @@
+.skills {
+    position: absolute;
+    top: 150px;
+    left: 5px;
+	z-index: 0;
+	width: 554px;
+    height: 502px;
+	
+	img.background {
+		width: 674px;
+		position: relative;
+		top: -147px;
+		left: 43px;
+	}
+
+	.skill-icon {
+		position: absolute;
+		width: 50px;
+
+		// Define the animations for the icons
+		animation-name: floating-icons;
+		-webkit-animation-name: floating-icons;
+		animation-iteration-count: infinite;
+		-webkit-animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		-webkit-animation-timing-function: ease-in-out;
+		animation-duration: 4s;
+
+		// Odd icons have different animation frame.
+		&:nth-child(2n+3) {
+			animation-duration: 5s;
+		}
+
+		// Specifications for each icon positioning
+		&.first {
+			top: 385px;
+    		left: 34px;
+		}
+
+		&.second {
+			top: 300px;
+    		left: -25px;
+		}
+
+		&.third {
+			top: 205px;
+    		left: -46px;
+		}
+
+		&.fourth {
+			top: 120px;
+    		left: -49px;
+		}
+
+		&.fifth {
+			top: 40px;
+    		left: -24px;
+		}
+
+		&.sixth {
+			top: -36px;
+    		left: 16px;
+		}
+
+		&.seventh {
+			top: -20px;
+			right: 50px;
+		}
+
+		&.eighth {
+			bottom: 110px;
+    		right: -182px;
+		}
+
+		&.ninth {
+			bottom: 21px;
+    		right: -126px;
+		}
+	}
+}
+
+@keyframes floating-icons {
+	0% { transform: translate(0%, 0%); }
+	25% { transform: translate(5%, 15%); }	
+	50% { transform: translate(10%, 5%); }	
+	75% { transform: translate(0%, 15%); }	
+	100% { transform: translate(0%, 0%); }			
+}
