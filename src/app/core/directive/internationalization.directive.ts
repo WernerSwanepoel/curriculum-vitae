@@ -30,6 +30,8 @@ export class InternationalizationDirective implements OnInit{
     ngOnInit(): void {}
 
     private retrievePropertyValueByLocation(): any {
+
+        this.locale = null; //disabled localization
         
         if(this._data) {
 
