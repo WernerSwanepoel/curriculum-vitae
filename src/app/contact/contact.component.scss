@@ -4,6 +4,11 @@
     justify-content: center;
     background-color: #d4e7fe;
 
+    #map {
+        width: 100%; 
+        height: 200px;
+    }
+
     .feedback-container {
         display: none;
         position: absolute;

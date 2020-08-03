@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, AfterViewInit } from '@angular/core';
 import {
   faEnvelope, faPhone, faTimes,
   faMapMarkerAlt, IconDefinition
@@ -6,6 +6,7 @@ import {
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ContactService } from './contact.service';
 import { Contact } from '../model/contact.model';
+import * as Leaflet from 'leaflet';
 
 @Component({
   selector: 'app-contact',
@@ -13,13 +14,14 @@ import { Contact } from '../model/contact.model';
   styleUrls: ['./contact.component.scss', './contact.component.responsivity.scss']
 })
 
-export class ContactComponent implements OnInit {
-  
+export class ContactComponent implements OnInit, AfterViewInit {
+
   name: string;
   email: string;
   phone: string;
   location: string;
-    
+  map: Leaflet.Map;
+
   faEnvelope: IconDefinition;
   faPhone: IconDefinition;
   faMapMarkerAlt: IconDefinition;
@@ -30,6 +32,28 @@ export class ContactComponent implements OnInit {
   feedbackStatus: string;
 
   constructor(private contactService: ContactService) { }
+  
+  ngOnInit(): void {
+    this.name = 'Werner Swanepoel';
+    this.email = 'wwwerner.swan@gmail.com';
+    this.phone = '+27(0) 60 988 0518';
+    this.location = 'Pretoria, South Africa';
+
+    this.faEnvelope = faEnvelope;
+    this.faPhone = faPhone;
+    this.faMapMarkerAlt = faMapMarkerAlt;
+    this.faTimes = faTimes;
+  }
+
+  ngAfterViewInit(): void {
+
+    this.map = Leaflet.map('map').setView([-25.731340, 28.218370], 5);
+    Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'edupala.com © Angular LeafLet',
+    }).addTo(this.map);
+
+    Leaflet.marker([-25.731340, 28.218370]).addTo(this.map).bindPopup('Pretoria');
+  }
 
   contactForm: FormGroup = new FormGroup({
     name: new FormControl('',[
@@ -61,17 +85,6 @@ export class ContactComponent implements OnInit {
     return this.contactForm.get('options')
   }
 
-  ngOnInit(): void {
-    this.name = 'Werner Swanepoel';
-    this.email = 'wwwerner.swan@gmail.com';
-    this.phone = '+27(0) 60 988 0518';
-    this.location = 'Pretoria, South Africa';
-
-    this.faEnvelope = faEnvelope;
-    this.faPhone = faPhone;
-    this.faMapMarkerAlt = faMapMarkerAlt;
-    this.faTimes = faTimes;
-  }
 
   saveContact(contact: Contact) {
     this.contactService.createContact(contact).then(() => {

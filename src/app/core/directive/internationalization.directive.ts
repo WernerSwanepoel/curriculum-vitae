@@ -20,6 +20,7 @@ export class InternationalizationDirective implements OnInit{
         @Inject(LOCALE_ID) public locale: string
     ) {}
 
+    // tslint:disable-next-line: adjacent-overload-signatures
     set data(value: any[]) {
         if(value) {
             this._data = value;
@@ -31,8 +32,8 @@ export class InternationalizationDirective implements OnInit{
 
     private retrievePropertyValueByLocation(): any {
 
-        this.locale = null; //disabled localization
-        
+        this.locale = null; // disabled localization
+
         if(this._data) {
 
             const value: string[] = this._data
