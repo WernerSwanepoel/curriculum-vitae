@@ -70,10 +70,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   private updateNavigation() {
 
     if(this._activeSection && this.renderer) {
-      
+
       // Remove any selected anchor
       const activePreviousElem = this.nav.nativeElement.querySelector('a.active');
-      
+
       if(activePreviousElem) {
         this.renderer.removeClass(activePreviousElem, 'active');
       }
@@ -102,14 +102,15 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   async share() {
-    try{
+    try {
       const sharedResponse = await this.ngNavigatorShareService.share({
-        title:'`Live Resume - Guilherme Borges Bastos',
-        text: `Hello, I'm a Full-stack Java Web Developer with 10+ years of experience designing web and mobile projects. Find out more in my curriculum-vitae!`,
-        url: 'https://guilhermeborgesbastos.com'
+        title: '`Live CV - Werner Swanepoel',
+        // tslint:disable-next-line: max-line-length
+        text: `Hello, I'm a Full-stack .NET Web Developer with a lot of experience designing web and mobile projects since 2014 December. Find out more in my curriculum-vitae!`,
+        url: 'https://wernerswanepoel.github.io/curriculum-vitae/'
       });
-    } catch(error) {
+    } catch (error) {
       console.log('You app is not shared, reason: ',error);
-    }    
+    }
   }
 }
