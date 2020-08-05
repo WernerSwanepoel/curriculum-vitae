@@ -110,7 +110,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         url: 'https://wernerswanepoel.github.io/curriculum-vitae/'
       });
     } catch (error) {
-      console.log('You app is not shared, reason: ',error);
+      console.log('You app is not shared, reason: ', error);
     }
   }
 }

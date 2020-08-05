@@ -12,6 +12,7 @@
 
             // Specifications for each icon positioning.
             &.first {
+                
                 top: 310px;
                 left: -15px;
             }
@@ -55,6 +56,11 @@
                 bottom: 30px;
                 right: 0;
             }
+        }
+        
+        .skill-icon:hover {
+            width:200px;
+            height: 200px;
         }
     }
 }

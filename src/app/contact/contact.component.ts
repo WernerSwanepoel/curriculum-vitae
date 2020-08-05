@@ -32,11 +32,11 @@ export class ContactComponent implements OnInit, AfterViewInit {
   feedbackStatus: string;
 
   constructor(private contactService: ContactService) { }
-  
+
   ngOnInit(): void {
     this.name = 'Werner Swanepoel';
     this.email = 'wwwerner.swan@gmail.com';
-    this.phone = '+27(0) 60 988 0518';
+    this.phone = '+27 60 988 0518';
     this.location = 'Pretoria, South Africa';
 
     this.faEnvelope = faEnvelope;

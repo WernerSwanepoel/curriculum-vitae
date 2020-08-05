@@ -5,6 +5,22 @@ header {
     max-width: 1400px;
     width: 100%;
 
+    li { 
+        color: #666;
+        display:inline-block; 
+        margin:0;
+        text-transform:uppercase; 
+    }
+    li:after {
+        display:block;
+        content: '';
+        border-bottom: solid 3px #222f5c;  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+    }
+    li:hover:after { transform: scaleX(1); }
+    li.fromLeft:after{  transform-origin:  0% 50%; }
+
     ul {
         display: flex;
         flex-flow: row wrap;
@@ -52,8 +68,6 @@ header {
 
                     &:not(.active):hover {
                         background-color: #fff;
-                        -webkit-box-shadow: 0 0 9px 0 rgba(112, 112, 112, 0.16); 
-                        box-shadow: 0 0 9px 0 rgba(112, 112, 112, 0.16);
                     }
                 }
 

@@ -101,7 +101,13 @@
         .social-media {
             text-align: center;
             margin-top: 1em;
+            position: relative;
+            bottom: 0px;
+            top: 10px;
+            left: 70px;
     
+            color: #666;display:inline-block; margin:0;text-transform:uppercase;
+
             .icon {
                 font-size: 60px;
                 color: #414c73;
@@ -113,5 +119,15 @@
                 }
             }
         }
+
+        .social-media:after {
+            display:block;
+            content: '';
+            border-bottom: solid 3px #222f5c;  
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+        }
+        .social-media:hover:after { transform: scaleX(1); }
+        .social-media.fromLeft:after{  transform-origin:  0% 50%; }
     }
 }
