@@ -122,6 +122,7 @@
                 border-radius: 15px;
                 box-shadow: 0 0 9px 0 rgba(112, 112, 112, 0.16);
                 padding: 1em;
+                width: 446px;
     
                 .picture {
                     display: block;
@@ -138,6 +139,9 @@
     
                 .info {
     
+                    width:100%;
+                    text-align: left;
+
                     .icon {
                         margin-right: 10px;
                         color: #222f5c;
