@@ -147,7 +147,7 @@
             }
         ],
         "technologies": [
-            "C#", "Web API", "Razor", "HTML5", "Javascript", "CSS5", "Versioning Control", "SVN", "Slack", "SQL"
+            "C#", "Web API", "Razor", "HTML5", "Javascript", "CSS5", "SVN", "Slack", "SQL", "Bootstrap", "TeamCity", "JQuery"
         ],
         "medias": [
             {
@@ -193,7 +193,7 @@
             }
         ],
         "technologies": [
-            "Angular Core", "Azure Devops", "HTML5", "CSS", "Javascript", "Typescript", "Git", "Entity Framework (Code First)", "SQL", "MySql", "C#", "NPM", "LESS Styling Sheets"
+            "Angular Core", "Azure Devops", "HTML5", "CSS", "Javascript", "Typescript", "Git", "Bootstrap", "Entity Framework (Code First)", "SQL", "MySql", "C#", "NPM", "LESS Styling Sheets"
         ],
         "medias": [
             {
@@ -233,7 +233,7 @@
             }
         ],
         "technologies": [
-            "Angular Core", "Azure Devops", "HTML5", "CSS5", "Javascript", "Typescript", "Git", "MSTeams", "SQL", "C#", "NPM", "SCSS Styling Sheets", "MS Dynamics"
+            "Angular Core", "Azure Devops", "HTML5", "CSS5", "Javascript", "Typescript", "Bootstrap", "Git", "MSTeams", "SQL", "C#", "NPM", "SCSS Styling Sheets", "MS Dynamics"
         ],
         "medias": [
             {
