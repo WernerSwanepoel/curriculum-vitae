@@ -6,7 +6,9 @@
 
 // primary background and font
 $primary_font: "Montserrat", sans-serif;
+// $primary_background: linear-gradient(-45deg, #d4e7fe, #edeef3);
 $primary_background: #d4e7fe;
+
 
 // font-weight
 $thin:100;
@@ -24,6 +26,7 @@ $font-md: 18px;
 $font-lg: 20px;
 
 html, body {
+
     height: 100%;
     background: $primary_background;
     font-family: $primary_font;
@@ -36,6 +39,26 @@ html, body {
 
 section {
     display: flex;
+}
+
+// Global Scrollbars
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+// Track
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px #1881d6;;
+}
+
+// Handle 
+::-webkit-scrollbar-thumb {
+    background: #230666;
+}
+
+// Handle on hover 
+::-webkit-scrollbar-thumb:hover {
+    background:  #222f5c;
 }
 
 app-welcome, app-experience, app-about, app-posts, app-contact, app-code-samples { display: block; }
